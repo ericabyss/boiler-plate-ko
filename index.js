@@ -31,7 +31,7 @@ mongoose.connect('mongodb+srv://john:abcd1234@boilerplate.p8jgc.mongodb.net/boil
         return res.status(200).json({ //status(200)은 성공했다는 뜻
           success: true
       })
-    })//user정보들이 저장됨
+    })//user정보들이 저장됨  
   }) 
 
 
