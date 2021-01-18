@@ -7,7 +7,7 @@ const { User } = require("./models/User");//1. User 데이터를 가져와 줘�
 //application/x-www-form-urlencoded <-이렇게 된 데이터를 분석하여 가져와 줌. body-parser에 옵션을 줌
 app.use(bodyParser.urlencoded({extended: true}));
 
-//application/json <-이런 데이터를 분석하여 가져와줌
+//application/json <-이런 데이터를 분석하여 가져와줌.
 app.use(bodyParser.json());
 
 
