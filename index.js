@@ -36,4 +36,4 @@ mongoose.connect('mongodb+srv://john:abcd1234@boilerplate.p8jgc.mongodb.net/boil
 
 
 
-  app.listen(port, () => console.log(`Example app listening on port ${port}!`))//설정 포트에서 앱을 실행
+  app.listen(port, () => console.log(`Example app listening on port ${port}!`))//설정 ?포트에서 앱을 실행
