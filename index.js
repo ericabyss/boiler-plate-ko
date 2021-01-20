@@ -12,14 +12,14 @@ app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose')//mongoose연결
-mongoose.connect('mongodb+srv://john:abcd1234@boilerplate.p8jgc.mongodb.net/boilerplate?retryWrites=true&w=majority', {
+mongoose.connect('', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))//잘 연결이 안되었을때
 
 
 
-  app.get('/', (req, res) => res.send('Hello World!')) //루트 디렉토리에서 출력, 간단한 라우트
+  app.get('/', (req, res) => res.send('Hello World! Modify nodemon')) //루트 디렉토리에서 출력, 간단한 라우트
 
   app.post('/register', (req, res) => {
     //회원가입할때 필요한 정보들을 client에서 가져오면 그것들을 데이터베이스에 넣어준다.
