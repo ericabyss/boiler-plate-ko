@@ -2,6 +2,9 @@ const express = require('express')  //express module을 가져옴
 const app = express() //function을 이용하여 새로운 express app을 만들고
 const port = 5000 //백서버로 둘 포트
 const bodyParser = require('body-parser'); //3. body-parser를 가져와 줌
+
+const config = require('./config/key'); //key 선언
+
 const { User } = require("./models/User");//1. User 데이터를 가져와 줘야함
 
 //application/x-www-form-urlencoded <-이렇게 된 데이터를 분석하여 가져와 줌. body-parser에 옵션을 줌
@@ -12,7 +15,8 @@ app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose')//mongoose연결
-mongoose.connect('', {
+
+mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))//잘 연결이 안되었을때
