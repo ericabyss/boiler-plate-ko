@@ -39,5 +39,4 @@ mongoose.connect(config.mongoURI, {
   }) 
 
 
-
   app.listen(port, () => console.log(`Example app listening on port ${port}!`))//설정 포트에서 앱을 실행

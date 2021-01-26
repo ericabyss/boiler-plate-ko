@@ -26,14 +26,12 @@ const userSchema = mongoose.Schema({
     image: String, //이렇게도 타입 지정 가능
     token:{ //유효성
         type: String
-
     },
     tokenExp: {//토큰 사용기간
         type: Number
     }
-
 })
 
-const User = mongoose.model('User',userSchema)//스키마를 모델로 감싸줌 , 모델의 이름 : User
+const User = mongoose.model('User',userSchema)//스키마를 모델로 감싸줌. 모델의 이름 : User
 
-module.exports = { User } //이 모델을 다른곳에서도 쓸 수 있게
+module.exports = { User } //이 모델을 다른곳에서도 쓸 수 있게 한다.
